@@ -5,8 +5,6 @@ import Img3 from "../assets/images/facilities/clinic4_lmtil0.jpg";
 import Img4 from "../assets/images/facilities/clinic3_mrsrew.jpg";
 import Img5 from "../assets/images/facilities/clinic2_bbmrbf.jpg";
 import Img6 from "../assets/images/facilities/clinic_mptn6n.jpg";
-import { FaHospital } from "react-icons/fa";
-import { MdOutlineLibraryAdd } from "react-icons/md";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import LibraryIcon from '../assets/icons/library_icon_w.svg';
 import './SectionFacilities.css';
