@@ -262,7 +262,8 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+/* Responsive */
+@media (max-width: 1199px) {
   #section_facilities::before {
     width: 100%;
     height: 60%;
@@ -274,21 +275,65 @@
 
   #section_facilities .facilities_wrapper {
     flex-direction: column-reverse;
+    justify-content: center;
+    /* Center content */
+    min-height: auto;
+    /* Allow auto height */
+    padding-bottom: 60px;
+    /* Space for arrows if needed, or remove if arrows hidden */
   }
 
   #section_facilities .carousel_handle {
+    position: relative;
+    /* Requested change to non-absolute */
     width: 100%;
     padding-right: 0;
+    margin-top: 30px;
   }
 
   #section_facilities .floating_title {
+    flex: 0 0 auto;
     width: 100%;
+    height: auto;
     padding-left: 0;
-    margin-bottom: 40px;
+    margin-right: 0;
+    margin-bottom: 20px;
     text-align: center;
+  }
+
+  /* Hide icon decoration as requested, only show H3 */
+  #section_facilities .icon_deco {
+    display: none;
+  }
+
+  #section_facilities h3 {
+    margin: 0;
+    font-size: 2.5rem;
+    /* Adjust font size if needed */
   }
 
   #section_facilities .nav_arrows {
     justify-content: center;
+    position: relative;
+    /* Adjust arrows if they are visible */
+    bottom: auto;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  /* Show scrollbar on mobile */
+  #section_facilities .facilities_scroll_container {
+    scrollbar-width: auto;
+    padding-bottom: 10px;
+  }
+
+  #section_facilities .facilities_scroll_container::-webkit-scrollbar {
+    display: block;
+    height: 6px;
+  }
+
+  #section_facilities .facilities_scroll_container::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
   }
 }

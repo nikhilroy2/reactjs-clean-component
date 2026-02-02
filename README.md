@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Preview
+[Live Demo](https://regal-kringle-1701b1.netlify.app/)
+
 ## Available Scripts
 
 In the project directory, you can run:

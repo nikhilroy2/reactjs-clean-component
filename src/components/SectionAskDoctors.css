@@ -34,22 +34,57 @@
 /* --- Sidebar (Left) --- */
 #section_ask_doctors .ask_sidebar {
   flex: 0 0 172px;
-  padding-top: 50px;
 }
 
 #section_ask_doctors .section_title {
   font-size: 3rem;
   font-weight: 800;
-  color: #1a1a1a;
+  color: #01579b;
   line-height: 1.2;
   margin-bottom: 40px;
+  margin-top: 0;
+}
+
+#section_ask_doctors .section_title span:nth-child(1) {
+  display: none;
+}
+
+#section_ask_doctors .section_title span:nth-child(2) {
+  display: inline-block;
+}
+
+@media (min-width: 900px) {
+  #section_ask_doctors .section_title {
+    color: #1a1a1a;
+    font-size: 38px;
+  }
+
+  #section_ask_doctors .section_title span:nth-child(1) {
+    display: inline-block;
+  }
+
+  #section_ask_doctors .section_title span:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  #section_ask_doctors .section_title {
+    font-size: 48px;
+  }
 }
 
 #section_ask_doctors .filter_menu {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0px;
   align-items: flex-start;
+}
+
+@media (min-width: 900px) {
+  #section_ask_doctors .filter_menu {
+    gap: 15px;
+  }
 }
 
 #section_ask_doctors .filter_btn {
@@ -81,9 +116,31 @@
 #section_ask_doctors .doctors_grid {
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 30px;
 }
+
+@media (min-width: 600px) {
+  #section_ask_doctors .doctors_grid {
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  #section_ask_doctors .doctors_grid {
+    max-width: 83.333333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #section_ask_doctors .doctors_grid {
+    max-width: 66.67%;
+  }
+}
+
+
+
 
 /* --- Doctor Card --- */
 #section_ask_doctors .doctor_card {
@@ -96,9 +153,9 @@
   flex-direction: column;
 }
 
-#section_ask_doctors .doctor_card:hover {
+/* #section_ask_doctors .doctor_card:hover {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-}
+} */
 
 #section_ask_doctors .card_header {
   display: flex;
@@ -138,16 +195,56 @@
 }
 
 #section_ask_doctors .card_footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
   padding: 16px;
+}
+
+@media (min-width: 600px) {
+  #section_ask_doctors .card_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 #section_ask_doctors .doctor_stats {
   display: flex;
+  flex-direction: row;
   gap: 20px;
 }
+
+@media (min-width: 600px) {
+  #section_ask_doctors .doctor_stats {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (min-width: 734px) {
+  #section_ask_doctors .doctor_stats {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 900px) {
+  #section_ask_doctors .doctor_stats {
+    flex-direction: column;
+    gap: 8px;
+
+  }
+}
+
+@media (min-width: 1200px) {
+  #section_ask_doctors .doctor_stats {
+    flex-direction: row;
+    gap: 20px;
+
+  }
+}
+
+
+
 
 #section_ask_doctors .stat_item {
   display: flex;
@@ -171,6 +268,15 @@
   font-size: 0.8rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  width: 100%;
+  margin-top: 16px;
+}
+
+@media (min-width: 600px) {
+  #section_ask_doctors .chat_btn {
+    width: auto;
+    margin-top: 0;
+  }
 }
 
 #section_ask_doctors .chat_btn:hover {
@@ -183,9 +289,7 @@
     flex-direction: column;
   }
 
-  #section_ask_doctors .doctors_grid {
-    grid-template-columns: 1fr;
-  }
+
 
   #section_ask_doctors .ask_sidebar {
     text-align: center;
@@ -194,7 +298,19 @@
 
   #section_ask_doctors .filter_menu {
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 10px;
+    /* Space for scrollbar if any */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #section_ask_doctors .filter_btn {
+    width: auto;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    text-align: center;
   }
 }
